@@ -1,0 +1,23 @@
+{
+  "name": "public-mobile",
+  "version": "1.0.0",
+  "description": "Public mobile form flow e2e test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "e2e-setup": "node_modules/selenium-standalone/bin/selenium-standalone install",
+    "e2e": "nightwatch --retries ${E2E_RETRIES:-0} -c ./nightwatch.conf.js",
+    "e2e:headless": "nightwatch --retries ${E2E_RETRIES:-0} -c ./nightwatch.conf.js --env headless --tag local"
+  },
+  "author": "Jack Xu",
+  "license": "ISC",
+  "dependencies": {
+    "nightwatch": "^1.1.12"
+  },
+  "devDependencies": {
+    "chromedriver": "^75.0.0",
+    "nightwatch": "^1.1.12",
+    "selenium-server": "^3.141.59",
+    "selenium-standalone": "^6.16.0"
+  }
+}
