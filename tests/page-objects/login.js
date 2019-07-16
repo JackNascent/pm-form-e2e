@@ -7,24 +7,24 @@ module.exports = {
     title:{
       selector: "h2"
     },
-    community: {
-      selector: "#app > div > div:nth-child(2) > div > div > div > div > div > div > div.user-login-contain"
+    community_username: {
+      selector: "#lithium-username"
+    },
+    community_password: {
+      selector: "#lithium-password"
     },
     community_button: {
       selector:
-        "#app > div > div:nth-child(2) > div > div > div > div > div > div > div:nth-child(3) > button"
+        "#lithium-login-button"
     }
   },
   commands: [
     {
       loginCommunity(timeout) {
-        const community_username = this.elements.community.selector + " > input:nth-child(1)";
-        const community_password = this.elements.community.selector + " > input:nth-child(2)";
-
-        return this.waitForElementVisible(community_username, timeout)
-          .setValue(community_username, "Consumer1")
-          .waitForElementVisible(community_password, timeout)
-          .setValue(community_password, "Catch1bug")
+        return this.waitForElementVisible("@community_username", timeout)
+          .setValue("@community_username", "Consumer1")
+          .waitForElementVisible("@community_password", timeout)
+          .setValue("@community_password", "Catch1bug")
           .waitForElementVisible("@community_button", timeout)
           .click("@community_button");
       }

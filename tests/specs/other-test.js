@@ -1,7 +1,7 @@
 module.exports = {
   "@tags": ["local"],
 
-  "Sample test for Public Mobile Form": function(browser) {
+  "Test for Public Mobile Form: Other": function(browser) {
     // eslint-disable-line func-names
     const timeout = 10000;
     const FormPage = browser.page.form();
@@ -42,33 +42,21 @@ module.exports = {
         "1. Select an issue category"
       )
       
-      // Choose main category "Other" and subcategory "Early Renewal Request", then go next
-      .select_main_Other(timeout)
-      .select_sub_EarlyRenewal(timeout)
-      .waitForElementVisible("@problem_next", timeout)
-      .click("@problem_next")
-
-      // Select yes of the question and go next
-      .waitForElementPresent("@detail_yes", timeout)
-      .click("@detail_yes")
-      .waitForElementVisible("@detail_next", timeout)
-      .click("@detail_next")
+      // Flow operation
+      .select_other_earlyrenewal(timeout)
 
       // Set up the verification fields  
-      .input_verification(timeout)
+      .input_verification_3pii(timeout)
       
       // Wait for the loading screen
-      .pause(10000)
+      .pause(timeout)
 
       // Check the message
-      // .waitForElementVisible("@verification_ss_message", timeout)
-      // .verify.containsText("@verification_ss_message", "Verification Submitted!")
+      .waitForElementVisible("@verification_message", timeout)
+      .verify.containsText("@verification_message", "Verification Submitted!")
 
       // Submit the form
       .waitForElementVisible("@form_submit_button", timeout)
-      .click("@form_submit_button")
-
-      // Dummy wait
-      .pause(timeout);
+      .click("@form_submit_button");
   }
 };

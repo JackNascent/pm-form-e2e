@@ -12,7 +12,8 @@
   "author": "Jack Xu",
   "license": "ISC",
   "dependencies": {
-    "nightwatch": "^1.1.12"
+    "nightwatch": "^1.1.12",
+    "nightwatch-vrt": "^0.2.10"
   },
   "devDependencies": {
     "chromedriver": "^75.0.0",

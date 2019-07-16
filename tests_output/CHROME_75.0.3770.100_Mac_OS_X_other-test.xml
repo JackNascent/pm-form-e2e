@@ -3,11 +3,15 @@
             failures="0"
             tests="1">
 
-  <testsuite name="sample-test"
-    errors="0" failures="0" hostname="" id="" package="sample-test" skipped="0"
-    tests="1" time="26.43" timestamp="">
+  <testsuite name="other-test"
+    errors="0" failures="0" hostname="" id="" package="other-test" skipped="0"
+    tests="1" time="13.78" timestamp="">
   
-    <testcase name="Sample test for Public Mobile Form" classname="sample-test" time="26.43" assertions="23">
+    <testcase name="Test for Public Mobile Form: Other" classname="other-test" time="13.78" assertions="25">
+
+    
+
+    
 
     
 
