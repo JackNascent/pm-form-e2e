@@ -12,12 +12,11 @@
   "author": "Jack Xu",
   "license": "ISC",
   "dependencies": {
-    "nightwatch": "^1.1.12",
     "nightwatch-vrt": "^0.2.10"
   },
   "devDependencies": {
-    "chromedriver": "^75.0.0",
-    "nightwatch": "^1.1.12",
+    "chromedriver": "^75.1.0",
+    "nightwatch": "^1.1.13",
     "selenium-server": "^3.141.59",
     "selenium-standalone": "^6.16.0"
   }
