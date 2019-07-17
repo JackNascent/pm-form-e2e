@@ -1,7 +1,7 @@
 module.exports = {
     "@tags": ["local"],
   
-    "Test for Public Mobile Form: Other": function(browser) {
+    "Test for Public Mobile Form: Rewards": function(browser) {
       // eslint-disable-line func-names
       const timeout = 10000;
       const FormPage = browser.page.form();
